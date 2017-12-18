@@ -54,7 +54,7 @@ def password(plaintext, service, length=LENGTH, alphabet=ALPHABET):
 
 
 '''Copies a string to the clipboard using tkinter. This functionality is initially disabled
-in the preferences. '''
+in the preferences for security reasons. '''
 
 
 def to_clipboard(string_to_copy):
@@ -69,7 +69,8 @@ def to_clipboard(string_to_copy):
 def main():
     flag = True
     while flag:
-        service = input("Enter the service name and iteration, or 'exit' to stop: ")
+        service = input(
+            "Enter the service name and iteration, or 'exit' to stop: ")
         if service == 'exit':
             flag = False
             break
@@ -77,7 +78,7 @@ def main():
         master = getpass.getpass()
         print()
         pw = password(master, service)
-        print(pw + '\n')
+        print(pw)
         if CLIPBOARD_FLAG:
             to_clipboard(pw)
             print("(Copied To Clipboard)" + '\n')
