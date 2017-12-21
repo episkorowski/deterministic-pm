@@ -6,7 +6,7 @@ from tkinter import Tk
 Change this to some other sufficiently high-entropy string.
 WARNING: Changing the secret key will generate completely different passwords, so do not change
 it after you first set it unless you want to reset all of your passwords. '''
-SECRET_KEY = "me1chioRsho3(k5s$S"
+SECRET_KEY = "MakeThisAUniqueString"
 
 CLIPBOARD_FLAG = False     # Automated copying initially disabled
 LENGTH = 16                # Length of generated passwords
